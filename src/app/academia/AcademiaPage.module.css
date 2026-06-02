@@ -1,0 +1,170 @@
+/* src/app/academia/AcademiaPage.module.css */
+.section {
+  padding: 80px 0;
+  background: var(--color-bg-primary);
+}
+
+.storyGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 80px;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.textCol {}
+
+.tag {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  display: block;
+  margin-bottom: 12px;
+}
+
+.heading {
+  font-family: var(--font-heading);
+  font-size: clamp(32px, 4vw, 48px);
+  color: var(--color-ivory);
+  font-weight: 500;
+  line-height: 1.15;
+  margin-bottom: 24px;
+}
+
+.paragraph {
+  font-size: 15px;
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+.paragraph strong {
+  color: var(--color-gold);
+  font-weight: 500;
+}
+
+.imageCol {}
+
+.imageWrap {
+  position: relative;
+  height: 380px;
+  background: #111;
+  border-radius: 2px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+}
+
+.image {
+  object-fit: cover;
+}
+
+/* Pillars Section */
+.pillarsSection {
+  border-top: 1px solid rgba(181, 133, 82, 0.15);
+  padding-top: 80px;
+  margin-bottom: 100px;
+}
+
+.pillarsHeading {
+  font-family: var(--font-heading);
+  font-size: 32px;
+  color: var(--color-ivory);
+  font-weight: 500;
+  margin-bottom: 48px;
+  text-align: center;
+}
+
+.pillarsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.pillarCard {
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  padding: 40px 32px;
+  border-radius: 2px;
+  transition: border-color var(--duration) var(--ease-out);
+}
+.pillarCard:hover {
+  border-color: var(--color-gold);
+}
+
+.pillarNum {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 36px;
+  color: var(--color-gold);
+  margin-bottom: 16px;
+  font-weight: 300;
+}
+
+.pillarTitle {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color-ivory);
+  margin-bottom: 12px;
+}
+
+.pillarText {
+  font-size: 13.5px;
+  color: var(--color-text-secondary);
+  line-height: 1.65;
+  font-weight: 300;
+}
+
+/* Banner */
+.banner {
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(181, 133, 82, 0.08) 0%,
+    rgba(26, 18, 13, 0.2) 100%
+  );
+  border: 1px solid rgba(181, 133, 82, 0.25);
+  padding: 60px 40px;
+  text-align: center;
+  border-radius: 2px;
+}
+
+.bannerContent {
+  max-width: 640px;
+  margin-inline: auto;
+}
+
+.bannerHeading {
+  font-family: var(--font-heading);
+  font-size: 32px;
+  color: var(--color-gold);
+  font-weight: 400;
+  margin-bottom: 14px;
+}
+
+.bannerText {
+  font-size: 14.5px;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  margin-bottom: 32px;
+  font-weight: 300;
+}
+
+.bannerCtas {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 900px) {
+  .storyGrid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .pillarsGrid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .pillarCard {
+    padding: 30px 24px;
+  }
+}

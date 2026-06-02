@@ -1,0 +1,166 @@
+/* Machines.module.css */
+.section {
+  padding: var(--section-py) 0;
+  background: var(--color-bg-primary);
+  overflow: hidden;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: clamp(32px, 4vw, 54px);
+  font-weight: 500;
+  color: var(--color-ivory);
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  font-size: 15px;
+  color: var(--color-text-secondary);
+  font-weight: 300;
+  max-width: 540px;
+  margin-inline: auto;
+}
+
+/* ── Carousel ────────────────────────────────── */
+.carouselWrapper {}
+
+.trackOuter {
+  overflow: hidden;
+}
+
+.track {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ── Machine Card ────────────────────────────── */
+.card {
+  flex: 0 0 calc(20% - 16px);
+  min-width: 220px;
+  background: var(--color-bg-card);
+  border: 1px solid rgba(43,29,20,0.6);
+  border-radius: 2px;
+  overflow: hidden;
+  transition: border-color var(--duration) var(--ease-out),
+              transform var(--duration) var(--ease-out),
+              box-shadow var(--duration) var(--ease-out);
+  cursor: pointer;
+}
+
+.card:hover {
+  border-color: var(--color-gold);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+}
+
+.cardImg {
+  position: relative;
+  height: 180px;
+  overflow: hidden;
+  background: #111;
+}
+
+.cardImgEl {
+  object-fit: cover;
+  transition: transform 0.6s var(--ease-out);
+}
+.card:hover .cardImgEl { transform: scale(1.06); }
+
+.cardInfo { padding: 20px; }
+
+.cardBrand {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--color-ivory);
+  margin-bottom: 4px;
+}
+
+.cardModel {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-style: italic;
+  color: var(--color-gold);
+  margin-bottom: 14px;
+}
+
+.cardLink {
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color var(--duration) var(--ease-out),
+              gap var(--duration) var(--ease-out);
+}
+.cardLink:hover { color: var(--color-gold); gap: 10px; }
+
+/* ── Carousel Controls ───────────────────────── */
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 50px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.nav { display: flex; gap: 12px; }
+
+.navBtn {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  background: transparent;
+  color: var(--color-text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color var(--duration) var(--ease-out),
+              color var(--duration) var(--ease-out),
+              background var(--duration) var(--ease-out);
+}
+.navBtn:hover {
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+  background: var(--color-gold-subtle);
+}
+.navBtn:disabled { cursor: default; }
+
+.footerText {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  font-weight: 300;
+  max-width: 360px;
+  text-align: center;
+}
+
+.allLink {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border);
+  padding: 13px 28px;
+  border-radius: 2px;
+  transition: border-color var(--duration) var(--ease-out),
+              color var(--duration) var(--ease-out);
+}
+.allLink:hover { border-color: var(--color-gold); color: var(--color-gold); }
+
+@media (max-width: 900px) {
+  .card { flex: 0 0 280px; }
+  .controls { justify-content: center; }
+  .footerText { display: none; }
+}

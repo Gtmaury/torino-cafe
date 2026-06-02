@@ -1,0 +1,130 @@
+/* Courses.module.css */
+.section {
+  background: var(--color-ivory);
+  padding: var(--section-py) 0;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.sidebar {}
+.sidebar :global(.label) { color: var(--color-bronze); }
+
+.line {
+  width: 40px;
+  height: 1px;
+  background: var(--color-bronze);
+  margin-bottom: 24px;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: clamp(32px, 3.5vw, 50px);
+  font-weight: 500;
+  color: var(--color-bg-primary);
+  margin-bottom: 40px;
+  line-height: 1.15;
+}
+
+.sidebarCta {
+  border-color: rgba(43,29,20,0.4) !important;
+  color: var(--color-bg-primary) !important;
+}
+.sidebarCta:hover {
+  border-color: var(--color-gold) !important;
+  color: var(--color-gold) !important;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+/* Card */
+.card {
+  background: #fff;
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+  transition: transform var(--duration) var(--ease-out),
+              box-shadow var(--duration) var(--ease-out);
+  cursor: pointer;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.14);
+}
+
+.cardImg {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.cardImgEl {
+  object-fit: cover;
+  transition: transform 0.6s var(--ease-out);
+}
+.card:hover .cardImgEl { transform: scale(1.06); }
+
+.cardBody {
+  padding: 22px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardTag {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 8px;
+}
+
+.cardTitle {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--color-bg-primary);
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.cardDesc {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.65;
+  margin-bottom: 18px;
+  font-weight: 300;
+}
+
+.cardLink {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: gap var(--duration) var(--ease-out);
+  margin-top: auto;
+}
+.cardLink:hover { gap: 10px; }
+
+@media (max-width: 1100px) {
+  .layout { grid-template-columns: 1fr; gap: 40px; }
+}
+@media (max-width: 600px) {
+  .grid { grid-template-columns: 1fr; }
+}

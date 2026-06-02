@@ -1,0 +1,163 @@
+/* src/app/globals.css
+   ─────────────────────────────────────────────
+   Design Tokens + Global Reset
+   ─────────────────────────────────────────────
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;1,6..96,400;1,6..96,500;1,6..96,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+/* ── Design Tokens ──────────────────────────────────────────── */
+:root {
+  /* Background scale */
+  --color-bg-primary:     #0A0A0A;
+  --color-bg-secondary:   #141414;
+  --color-bg-card:        #1A120D;
+  --color-border:         #2B1D14;
+
+  /* Brand colors */
+  --color-bronze:         #6E4A2D;
+  --color-gold:           #B58552;
+  --color-gold-hover:     #C99A63;
+  --color-gold-subtle:    rgba(181, 133, 82, 0.08);
+
+  /* Text scale */
+  --color-text-primary:   #F5F1EB;
+  --color-text-secondary: #C8BBAA;
+  --color-text-muted:     #8A7A6A;
+  --color-beige:          #E7DDD1;
+  --color-ivory:          #F5F1EB;
+
+  /* Typography */
+  --font-heading: 'Playfair Display', 'Bodoni Moda', 'Cormorant Garamond', Georgia, serif;
+  --font-body:    'Inter', system-ui, sans-serif;
+
+  /* Spacing — base for 1920px wide screens */
+  --section-py:       100px;
+  --container-max:    1280px;
+  --container-px:     40px;
+
+  /* Motion */
+  --ease-out:      cubic-bezier(0.4, 0, 0.2, 1);
+  --duration:      350ms;
+  --duration-slow: 600ms;
+}
+
+/* ── Reset ──────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  /* Retina sub-pixel rendering */
+  -webkit-font-smoothing:  antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  overflow-x: hidden;
+  line-height: 1.7;
+}
+
+img   { display: block; max-width: 100%; }
+a     { text-decoration: none; color: inherit; }
+ul    { list-style: none; }
+button { cursor: pointer; font-family: inherit; }
+
+/* ── Global Utilities ───────────────────────────────────────── */
+.container {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-px);
+}
+
+/* Scroll-reveal base states */
+.reveal {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+/* ══════════════════════════════════════════════════════════════
+   RESPONSIVE BREAKPOINTS
+   ─────────────────────────────────────────────────────────────
+   1920px  → user's 1080p monitor         (base styles)
+   1440px  → MacBook Pro 15" CSS viewport (DPR=2, 2880×1800)
+    900px  → tablet landscape
+    600px  → mobile
+   ══════════════════════════════════════════════════════════════ */
+
+/* ── 1440px — MacBook Pro 15" Retina ────────────────────────── */
+/*
+   At 1440×900 CSS px the container is already 1280px wide, leaving
+   only 80px of breathing room each side. We tighten the container
+   and slightly reduce section padding so the proportions match
+   what 1920px looks like on a regular 1080p screen.
+*/
+@media (max-width: 1500px) {
+  :root {
+    --container-max: 1160px;   /* proportionally narrower, like 1280/1920 ratio */
+    --section-py:    88px;
+    --container-px:  40px;
+  }
+}
+
+/* ── Retina / HiDPI display ─────────────────────────────────── */
+/*
+   MacBook Pro 2880×1800 → DPR=2 → CSS viewport 1440×900
+   These rules ensure crisp rendering and appropriate sizing
+   for high-density screens at any viewport width.
+*/
+@media (-webkit-min-device-pixel-ratio: 2),
+       (min-resolution: 192dpi) {
+  html {
+    /* Slightly sharper letter spacing on Retina */
+    letter-spacing: 0.005em;
+  }
+
+  /* Ensure borders render crisp at 2× density */
+  * {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+}
+
+/* ── ≤900px — Tablet ────────────────────────────────────────── */
+@media (max-width: 900px) {
+  :root {
+    --section-py:    70px;
+    --container-px:  24px;
+    --container-max: 100%;
+  }
+}
+
+/* ── ≤600px — Mobile ────────────────────────────────────────── */
+@media (max-width: 600px) {
+  :root {
+    --section-py:    52px;
+    --container-px:  16px;
+  }
+}
+
+/* ── ≥2000px — High-Resolution Desktop (e.g. 2880px / 4K native) ── */
+@media (min-width: 2000px) {
+  html {
+    zoom: 1.5;
+  }
+}
+

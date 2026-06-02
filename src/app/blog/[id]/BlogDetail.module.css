@@ -1,0 +1,131 @@
+/* src/app/blog/[id]/BlogDetail.module.css */
+
+.article {
+  padding: 80px 0;
+  background: var(--color-bg-primary);
+}
+
+.wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+  font-size: 13px;
+  font-family: var(--font-body);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.category {
+  color: var(--color-gold);
+  font-weight: 600;
+}
+
+.date,
+.readTime {
+  color: var(--color-text-muted);
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.date::before,
+.readTime::before {
+  content: "•";
+  margin-right: 12px;
+  color: var(--color-border);
+  display: inline-block;
+}
+
+.imageWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  margin-bottom: 48px;
+}
+
+.image {
+  object-fit: cover;
+  object-position: center;
+}
+
+.bodyContent {
+  font-family: var(--font-heading);
+  font-size: 21px;
+  line-height: 1.85;
+  color: var(--color-beige);
+}
+
+.paragraph {
+  margin-bottom: 32px;
+}
+
+.paragraph:first-of-type::first-letter {
+  font-size: 4.5rem;
+  font-weight: 400;
+  float: left;
+  line-height: 0.8;
+  padding-right: 12px;
+  padding-top: 4px;
+  color: var(--color-gold);
+  font-family: var(--font-heading);
+}
+
+.authorFooter {
+  margin-top: 60px;
+}
+
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-border) 20%, var(--color-border) 80%, transparent);
+  margin-bottom: 40px;
+}
+
+.footerFlex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 24px;
+}
+
+.footerText {
+  font-size: 16px;
+  color: var(--color-text-secondary);
+  max-width: 540px;
+  line-height: 1.6;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .article {
+    padding: 48px 0;
+  }
+  .bodyContent {
+    font-size: 18px;
+    line-height: 1.7;
+  }
+  .paragraph:first-of-type::first-letter {
+    font-size: 3.5rem;
+    padding-right: 8px;
+  }
+  .imageWrap {
+    margin-bottom: 32px;
+  }
+}

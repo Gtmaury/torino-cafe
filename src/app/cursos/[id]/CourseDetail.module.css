@@ -1,0 +1,208 @@
+/* src/app/cursos/[id]/CourseDetail.module.css */
+.section {
+  padding: 80px 0;
+  background: var(--color-bg-primary);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.leftCol {}
+
+.introBox {
+  margin-bottom: 40px;
+}
+
+.levelTag {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 8px;
+}
+
+.heading {
+  font-family: var(--font-heading);
+  font-size: 32px;
+  color: var(--color-ivory);
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.introText {
+  font-size: 15px;
+  color: var(--color-text-secondary);
+  line-height: 1.75;
+  font-weight: 300;
+}
+
+/* Syllabus Modules */
+.syllabus {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.moduleCard {
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  padding: 32px;
+  border-radius: 2px;
+}
+
+.moduleTitle {
+  font-family: var(--font-heading);
+  font-size: 22px;
+  color: var(--color-gold);
+  font-weight: 500;
+  margin-bottom: 18px;
+  border-bottom: 1px solid rgba(181, 133, 82, 0.15);
+  padding-bottom: 12px;
+}
+
+.topicsList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.topicItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 13.5px;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+.dotIcon {
+  width: 14px;
+  height: 14px;
+  color: var(--color-gold);
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.rightCol {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.imageWrap {
+  position: relative;
+  height: 280px;
+  background: #111;
+  border-radius: 2px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+}
+
+.image {
+  object-fit: cover;
+}
+
+/* Details Panel */
+.detailsPanel {
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  padding: 32px;
+  border-radius: 2px;
+}
+
+.panelTitle {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  color: var(--color-gold);
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.panelItems {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.panelItem {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border-bottom: 1px solid rgba(181, 133, 82, 0.1);
+  padding-bottom: 12px;
+}
+.panelItem:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.panelItem strong {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-text-muted);
+}
+
+.panelItem span {
+  font-size: 14px;
+  color: var(--color-ivory);
+  font-weight: 300;
+}
+
+.priceHighlight {
+  color: var(--color-gold) !important;
+  font-weight: 600 !important;
+  font-size: 18px !important;
+}
+
+/* CTA */
+.ctaBox {
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(181, 133, 82, 0.08) 0%,
+    rgba(26, 18, 13, 0.2) 100%
+  );
+  border: 1px solid rgba(181, 133, 82, 0.25);
+  padding: 36px;
+  border-radius: 2px;
+  text-align: center;
+}
+
+.ctaTitle {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  color: var(--color-gold);
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+
+.ctaText {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  line-height: 1.65;
+  margin-bottom: 28px;
+  font-weight: 300;
+}
+.ctaText strong {
+  color: var(--color-ivory);
+  font-weight: 500;
+}
+
+.ctaButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}

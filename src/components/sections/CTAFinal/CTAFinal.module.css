@@ -1,0 +1,55 @@
+/* CTAFinal.module.css */
+.section {
+  padding: 120px 0;
+  background: var(--color-bg-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+.section::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px; height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(181,133,82,0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.inner { text-align: center; position: relative; }
+
+.title {
+  font-family: var(--font-heading);
+  font-size: clamp(38px, 5vw, 68px);
+  font-weight: 400;
+  color: var(--color-ivory);
+  margin-bottom: 24px;
+  line-height: 1.1;
+}
+
+.title em {
+  color: var(--color-gold);
+  font-style: italic;
+}
+
+.text {
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--color-text-secondary);
+  max-width: 500px;
+  margin: 0 auto 48px;
+  line-height: 1.8;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 500px) {
+  .buttons { flex-direction: column; }
+}
