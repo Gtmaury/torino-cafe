@@ -19,7 +19,7 @@ export function Hero() {
       {/* Background */}
       <div className={styles.bg}>
         <video ref={videoRef} className={styles.bgVideo} autoPlay muted playsInline>
-          <source src="/videos/Hero-video.mp4" type="video/mp4" />
+          <source src="/videos/Hero-video_v3.mp4" type="video/mp4" />
         </video>
       </div>
       <div className={styles.overlay} />
@@ -52,10 +52,10 @@ export function Hero() {
             </span>
           </button>
         </div>
-      </div>
 
-      {/* Value cards */}
-      <HeroCards />
+        {/* Value cards - part of the main container flow */}
+        <HeroCards />
+      </div>
     </section>
   );
 }

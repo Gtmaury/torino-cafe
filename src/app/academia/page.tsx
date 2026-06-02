@@ -38,7 +38,7 @@ export default function AcademiaPage() {
             <div className={styles.imageCol}>
               <div className={styles.imageWrap}>
                 <Image
-                  src="/images/academy_interior.png"
+                  src="/images/academy_philosophy_v3.png"
                   alt="Interior moderno de la academia con estudiantes calibrando máquinas"
                   fill
                   sizes="(max-width: 900px) 100vw, 500px"
@@ -88,7 +88,7 @@ export default function AcademiaPage() {
             <div className={styles.imageCol}>
               <div className={styles.imageWrap}>
                 <Image
-                  src="/images/machine_marzocco.png"
+                  src="/images/academy_instalaciones_v3.png"
                   alt="Estación de Barista con La Marzocco Linea PB"
                   fill
                   sizes="(max-width: 900px) 100vw, 500px"
@@ -158,12 +158,12 @@ export default function AcademiaPage() {
 
           <div className={styles.galleryGrid}>
             {[
-              { src: '/images/academy_interior.png', alt: 'Sesión teórica y calibración de baristas' },
-              { src: '/images/machine_marzocco.png', alt: 'Extracción de espresso en La Marzocco' },
-              { src: '/images/course_cupping.png', alt: 'Sesión de cata de café especial (cupping)' },
-              { src: '/images/machine_arduino.png', alt: 'Victoria Arduino Eagle One de la academia' },
-              { src: '/images/course_avanzado.png', alt: 'Calibración de molienda y análisis sensorial' },
-              { src: '/images/machine_sanremo.png', alt: 'Sanremo Cafe Racer en barra de práctica' }
+              { src: '/images/gallery_1_v3.png', alt: 'Sesión teórica y calibración de baristas' },
+              { src: '/images/gallery_2_v3.png', alt: 'Extracción de espresso en La Marzocco' },
+              { src: '/images/gallery_3_v3.png', alt: 'Sesión de cata de café especial (cupping)' },
+              { src: '/images/gallery_4_v3.png', alt: 'Victoria Arduino Eagle One de la academia' },
+              { src: '/images/gallery_5_v3.png', alt: 'Calibración de molienda y análisis sensorial' },
+              { src: '/images/gallery_6_v3.png', alt: 'Sanremo Cafe Racer en barra de práctica' }
             ].map((img, index) => (
               <div key={index} className={styles.galleryItem}>
                 <Image

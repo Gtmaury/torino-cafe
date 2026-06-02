@@ -17,9 +17,9 @@ export default function HomePage() {
       <Academia />
       <Machines />
       <Courses />
-      <Certifications />
       <Blog />
       <CTAFinal />
+      <Certifications />
     </>
   );
 }

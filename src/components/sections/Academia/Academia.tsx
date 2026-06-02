@@ -35,7 +35,7 @@ export function Academia() {
 
         <RevealOnScroll className={styles.imageWrap}>
           <Image
-            src="/images/academy_interior.png"
+            src="/images/academy_main_v3.png"
             alt="Interior elegante de Torino Caffè Academy con maquinaria profesional"
             fill
             sizes="(max-width: 900px) 100vw, (max-width: 1500px) 50vw, 640px"
