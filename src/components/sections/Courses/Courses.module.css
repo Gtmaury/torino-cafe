@@ -1,4 +1,4 @@
-/* Courses.module.css */
+/* src/components/sections/Courses/Courses.module.css */
 .section {
   background: var(--color-ivory);
   padding: var(--section-py) 0;
@@ -6,24 +6,24 @@
 
 .layout {
   display: grid;
-  grid-template-columns: 320px 1fr;
-  gap: 80px;
+  grid-template-columns: 280px 1fr;
+  gap: 60px;
   align-items: start;
 }
 
 .sidebar {}
-.sidebar :global(.label) { color: var(--color-bronze); }
+.sidebar :global(.label) { color: var(--color-text-muted); }
 
 .line {
   width: 40px;
   height: 1px;
-  background: var(--color-bronze);
+  background: var(--color-text-muted);
   margin-bottom: 24px;
 }
 
 .title {
   font-family: var(--font-heading);
-  font-size: clamp(32px, 3.5vw, 50px);
+  font-size: clamp(32px, 3.5vw, 46px);
   font-weight: 500;
   color: var(--color-bg-primary);
   margin-bottom: 40px;
@@ -31,100 +31,139 @@
 }
 
 .sidebarCta {
-  border-color: rgba(43,29,20,0.4) !important;
+  border-color: rgba(43, 29, 20, 0.4) !important;
   color: var(--color-bg-primary) !important;
+  background: transparent !important;
 }
 .sidebarCta:hover {
-  border-color: var(--color-gold) !important;
-  color: var(--color-gold) !important;
+  background: var(--color-bg-primary) !important;
+  color: var(--color-ivory) !important;
+  border-color: var(--color-bg-primary) !important;
 }
 
+/* Grid Layout: 4 Columns on Desktop */
 .grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
   gap: 24px;
 }
 
-/* Card */
+/* Card - Borderless, Transparent and Shadowless */
 .card {
-  background: #fff;
-  border-radius: 2px;
-  overflow: hidden;
-  box-shadow: 0 2px 20px rgba(0,0,0,0.06);
-  transition: transform var(--duration) var(--ease-out),
-              box-shadow var(--duration) var(--ease-out);
+  background: transparent;
+  border-radius: 0;
+  overflow: visible;
+  box-shadow: none;
   cursor: pointer;
   height: 100%;
   display: flex;
   flex-direction: column;
+  transition: transform var(--duration) var(--ease-out);
 }
 .card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 48px rgba(0,0,0,0.14);
+  transform: translateY(-4px);
 }
 
 .cardImg {
   position: relative;
-  height: 200px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 12px;
   overflow: hidden;
+  margin-bottom: 20px;
+  border: 1px solid rgba(43, 29, 20, 0.08);
 }
 
 .cardImgEl {
   object-fit: cover;
   transition: transform 0.6s var(--ease-out);
 }
-.card:hover .cardImgEl { transform: scale(1.06); }
+.card:hover .cardImgEl {
+  transform: scale(1.04);
+}
 
 .cardBody {
-  padding: 22px;
+  padding: 0;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
 }
 
-.cardTag {
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--color-gold);
-  margin-bottom: 8px;
+/* Course Titles split in 2 lines */
+.cardTitle {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+  margin-bottom: 12px;
 }
 
-.cardTitle {
+.titleLine1 {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 400;
+  color: #776a5b;
+  letter-spacing: 0.5px;
+}
+
+.titleLine2 {
   font-family: var(--font-heading);
-  font-size: 24px;
-  font-weight: 500;
+  font-size: 26px;
+  font-weight: 600;
   color: var(--color-bg-primary);
-  margin-bottom: 10px;
-  line-height: 1.2;
 }
 
 .cardDesc {
-  font-size: 13px;
-  color: #666;
-  line-height: 1.65;
-  margin-bottom: 18px;
+  font-size: 13.5px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
   font-weight: 300;
 }
 
+/* Link Style with sliding arrow */
 .cardLink {
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: var(--color-gold);
-  display: flex;
+  color: var(--color-bronze);
+  display: inline-flex;
   align-items: center;
   gap: 6px;
-  transition: gap var(--duration) var(--ease-out);
+  transition: color var(--duration) var(--ease-out);
   margin-top: auto;
+  width: fit-content;
 }
-.cardLink:hover { gap: 10px; }
 
-@media (max-width: 1100px) {
-  .layout { grid-template-columns: 1fr; gap: 40px; }
+.linkArrow {
+  transition: transform var(--duration) var(--ease-out);
 }
+
+.cardLink:hover {
+  color: var(--color-gold);
+}
+.cardLink:hover .linkArrow {
+  transform: translateX(4px);
+}
+
+/* Responsiveness */
+@media (max-width: 1200px) {
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+}
+
 @media (max-width: 600px) {
-  .grid { grid-template-columns: 1fr; }
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .title {
+    margin-bottom: 28px;
+  }
 }

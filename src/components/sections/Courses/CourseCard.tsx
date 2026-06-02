@@ -9,6 +9,11 @@ interface CourseCardProps {
 }
 
 export function CourseCard({ course }: CourseCardProps) {
+  const parts = course.title.split(' ');
+  const firstLine = parts[0];
+  const secondLine = parts.slice(1).join(' ');
+  const shortDesc = course.description.split('.')[0] + '.';
+
   return (
     <article className={styles.card} id={`curso-${course.id}`}>
       <div className={styles.cardImg}>
@@ -16,17 +21,19 @@ export function CourseCard({ course }: CourseCardProps) {
           src={course.image}
           alt={course.alt}
           fill
-          sizes="(max-width: 600px) 100vw, 400px"
+          sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 250px"
           className={styles.cardImgEl}
         />
       </div>
       <div className={styles.cardBody}>
-        <p className={styles.cardTag}>{course.level}</p>
-        <h3 className={styles.cardTitle}>{course.title}</h3>
-        <p className={styles.cardDesc}>{course.description}</p>
+        <h3 className={styles.cardTitle}>
+          <span className={styles.titleLine1}>{firstLine}</span>
+          <span className={styles.titleLine2}>{secondLine}</span>
+        </h3>
+        <p className={styles.cardDesc}>{shortDesc}</p>
         <a href={course.href} className={styles.cardLink} aria-label={`Ver más sobre ${course.title}`}>
           Ver más
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" width="14" height="14" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="14" height="14" aria-hidden="true" className={styles.linkArrow}>
             <path d="M5 12h14M12 5l7 7-7 7"/>
           </svg>
         </a>
