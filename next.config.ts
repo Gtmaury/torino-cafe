@@ -21,7 +21,7 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
 
   // Fix lockfile workspace detection warning (OneDrive path)
-  outputFileTracingRoot: path.join(__dirname, '../../'),
+  outputFileTracingRoot: process.env.VERCEL ? undefined : path.join(__dirname, '../../'),
 };
 
 export default nextConfig;
