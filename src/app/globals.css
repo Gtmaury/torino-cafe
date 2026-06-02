@@ -154,10 +154,19 @@ button { cursor: pointer; font-family: inherit; }
   }
 }
 
+/* ── High-DPI Laptop Screens (e.g. MacBook Air/Pro 15" Retina with scaled resolutions) ── */
+@media (-webkit-min-device-pixel-ratio: 2) and (min-width: 1300px) and (max-width: 1800px),
+       (min-resolution: 192dpi) and (min-width: 1300px) and (max-width: 1800px) {
+  html {
+    zoom: 1.12; /* Scales up the entire layout by 12% to compensate for smaller physical size at high density */
+  }
+}
+
 /* ── ≥2000px — High-Resolution Desktop (e.g. 2880px / 4K native) ── */
 @media (min-width: 2000px) {
   html {
     zoom: 1.5;
   }
 }
+
 
