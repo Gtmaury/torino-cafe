@@ -126,16 +126,19 @@
   .links {
     display: none;
     position: fixed;
-    inset: 0;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     background: #0A0A0A;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 32px;
-    z-index: 9999;
+    z-index: 999;
   }
   .links.open { display: flex; }
   .link { font-size: 18px; letter-spacing: 3px; }
   .toggle { display: flex; z-index: 1000; }
-  .cta { display: none; }
+  .cta { display: none !important; }
 }

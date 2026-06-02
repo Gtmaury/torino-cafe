@@ -1,14 +1,24 @@
-// src/components/sections/Hero/Hero.tsx
+'use client';
+
+import { useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/Button/Button';
 import { HeroCards } from './HeroCards';
 import styles from './Hero.module.css';
 
 export function Hero() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.playbackRate = 1.8;
+    }
+  }, []);
+
   return (
     <section id="inicio" className={styles.section} aria-labelledby="hero-title">
       {/* Background */}
       <div className={styles.bg}>
-        <video className={styles.bgVideo} autoPlay muted playsInline loop>
+        <video ref={videoRef} className={styles.bgVideo} autoPlay muted playsInline>
           <source src="/videos/Hero-video.mp4" type="video/mp4" />
         </video>
       </div>
