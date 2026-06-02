@@ -1,5 +1,4 @@
 // src/components/sections/Hero/Hero.tsx
-import Image from 'next/image';
 import { Button } from '@/components/ui/Button/Button';
 import { HeroCards } from './HeroCards';
 import styles from './Hero.module.css';
@@ -9,17 +8,7 @@ export function Hero() {
     <section id="inicio" className={styles.section} aria-labelledby="hero-title">
       {/* Background */}
       <div className={styles.bg}>
-        <Image
-          src="/images/hero_bg.png"
-          alt="Máquina espresso premium extrayendo un café perfecto"
-          fill
-          priority
-          quality={90}
-          className={styles.bgImg}
-          sizes="(max-width: 900px) 100vw, (max-width: 1500px) 100vw, 100vw"
-          style={{ imageRendering: 'auto' }}
-        />
-        <video className={styles.bgVideo} autoPlay muted playsInline>
+        <video className={styles.bgVideo} autoPlay muted playsInline loop>
           <source src="/videos/Hero-video.mp4" type="video/mp4" />
         </video>
       </div>
