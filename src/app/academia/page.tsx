@@ -14,7 +14,8 @@ export default function AcademiaPage() {
     <>
       <SubpageHeader title="La Academia" breadcrumbs={[{ label: 'La Academia' }]} />
 
-      <section className={styles.section}>
+      {/* Filosofía Section */}
+      <section id="filosofia" className={styles.section}>
         <div className="container">
           
           {/* Main Story Grid */}
@@ -42,6 +43,7 @@ export default function AcademiaPage() {
                   fill
                   sizes="(max-width: 900px) 100vw, 500px"
                   className={styles.image}
+                  priority
                 />
               </div>
             </div>
@@ -75,7 +77,114 @@ export default function AcademiaPage() {
             </div>
           </div>
 
-          {/* Contact Banner */}
+        </div>
+      </section>
+
+      {/* Instalaciones & Espacio Section */}
+      <section id="instalaciones" className={`${styles.section} ${styles.sectionBorder}`}>
+        <div id="espacio" className={styles.anchorOffset} />
+        <div className="container">
+          <div className={styles.storyGrid}>
+            <div className={styles.imageCol}>
+              <div className={styles.imageWrap}>
+                <Image
+                  src="/images/machine_marzocco.png"
+                  alt="Estación de Barista con La Marzocco Linea PB"
+                  fill
+                  sizes="(max-width: 900px) 100vw, 500px"
+                  className={styles.image}
+                />
+              </div>
+            </div>
+            <div className={styles.textCol}>
+              <span className={styles.tag}>Las Instalaciones / El Espacio</span>
+              <h2 className={styles.heading}>Un Taller Barista Diseñado para la Excelencia</h2>
+              <p className={styles.paragraph}>
+                Nuestras instalaciones en Bogotá están diseñadas para simular el entorno de trabajo real de una cafetería de especialidad de alto volumen. Cada alumno dispone de una <strong>estación individual de barista</strong>, evitando tiempos de espera y maximizando la práctica real con la máquina.
+              </p>
+              <p className={styles.paragraph}>
+                Contamos con maquinaria icónica calibrada diariamente: máquinas multiboiler de marcas referentes como <strong>La Marzocco Linea PB</strong>, <strong>Victoria Arduino Eagle One</strong>, <strong>Sanremo</strong>, y molinos de molienda micrométrica de alta precisión.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Certificaciones Section */}
+      <section id="certificaciones" className={`${styles.section} ${styles.sectionBorder}`}>
+        <div className="container">
+          <div className={styles.sectionHeaderCentered}>
+            <span className={styles.tag}>Acreditación Internacional</span>
+            <h2 className={styles.headingCentered}>Rutas y Protocolos de Certificación</h2>
+            <p className={styles.subheadingCentered}>
+              Nuestros temarios de formación están estructurados siguiendo los estándares internacionales más reconocidos de la industria del café.
+            </p>
+          </div>
+
+          <div className={styles.certsGrid}>
+            <div className={styles.certCard}>
+              <div className={styles.certHeader}>
+                <span className={styles.certBadge}>SCA</span>
+                <h3 className={styles.certTitle}>Specialty Coffee Association</h3>
+              </div>
+              <p className={styles.certText}>
+                Te preparamos bajo la metodología del <strong>Coffee Skills Program (CSP)</strong> de la SCA. Cubrimos los aspectos esenciales en los módulos de Barista Skills, Brewing y Sensory Skills, facilitando tu camino hacia los exámenes de certificación internacional.
+              </p>
+            </div>
+
+            <div className={styles.certCard}>
+              <div className={styles.certHeader}>
+                <span className={styles.certBadge}>INEI</span>
+                <h3 className={styles.certTitle}>Istituto Nazionale Espresso Italiano</h3>
+              </div>
+              <p className={styles.certText}>
+                Enseñamos las reglas técnicas de oro para la elaboración del auténtico <strong>Espresso Italiano Certificado</strong> y Cappuccino Italiano. Domina el análisis sensorial (módulo de Cata) y la calibración mecánica bajo los protocolos de Italia.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Galería Section */}
+      <section id="galeria" className={`${styles.section} ${styles.sectionBorder}`}>
+        <div className="container">
+          <div className={styles.sectionHeaderCentered}>
+            <span className={styles.tag}>Galería de Fotos</span>
+            <h2 className={styles.headingCentered}>Nuestra Academia en Acción</h2>
+            <p className={styles.subheadingCentered}>
+              Descubre el día a día de nuestros alumnos y las sesiones prácticas en nuestras estaciones de espresso.
+            </p>
+          </div>
+
+          <div className={styles.galleryGrid}>
+            {[
+              { src: '/images/academy_interior.png', alt: 'Sesión teórica y calibración de baristas' },
+              { src: '/images/machine_marzocco.png', alt: 'Extracción de espresso en La Marzocco' },
+              { src: '/images/course_cupping.png', alt: 'Sesión de cata de café especial (cupping)' },
+              { src: '/images/machine_arduino.png', alt: 'Victoria Arduino Eagle One de la academia' },
+              { src: '/images/course_avanzado.png', alt: 'Calibración de molienda y análisis sensorial' },
+              { src: '/images/machine_sanremo.png', alt: 'Sanremo Cafe Racer en barra de práctica' }
+            ].map((img, index) => (
+              <div key={index} className={styles.galleryItem}>
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 380px"
+                  className={styles.galleryImage}
+                />
+                <div className={styles.galleryOverlay}>
+                  <p className={styles.galleryText}>{img.alt}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Banner */}
+      <section className={styles.section}>
+        <div className="container">
           <div className={styles.banner}>
             <div className={styles.bannerContent}>
               <h3 className={styles.bannerHeading}>¿Quieres conocer nuestras instalaciones?</h3>
@@ -83,13 +192,12 @@ export default function AcademiaPage() {
                 Te invitamos a agendar una visita personalizada a nuestros talleres en Bogotá y conversar con nuestros instructores sobre tus metas profesionales.
               </p>
               <div className={styles.bannerCtas}>
-                <Button href="#contacto" size="lg">
+                <Button href="/#contacto" size="lg">
                   Agendar una Visita
                 </Button>
               </div>
             </div>
           </div>
-
         </div>
       </section>
     </>

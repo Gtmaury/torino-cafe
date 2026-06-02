@@ -121,6 +121,171 @@
   display: flex;
 }
 
+.calendarSection {
+  padding: 80px 0;
+  background: var(--color-bg-primary);
+  border-top: 1px solid rgba(181, 133, 82, 0.15);
+}
+
+.calendarHeader {
+  max-width: 700px;
+  margin: 0 auto 56px auto;
+  text-align: center;
+}
+
+.tag {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  display: block;
+  margin-bottom: 12px;
+}
+
+.heading {
+  font-family: var(--font-heading);
+  font-size: clamp(32px, 4vw, 42px);
+  color: var(--color-ivory);
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.subheading {
+  font-size: 15px;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+.calendarContainer {
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: 2px;
+  padding: 40px;
+}
+
+.calendarTable {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.tableHeader {
+  display: grid;
+  grid-template-columns: 2fr 1.2fr 1.2fr 1fr 1fr;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 16px;
+  color: var(--color-gold);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.tableRow {
+  display: grid;
+  grid-template-columns: 2fr 1.2fr 1.2fr 1fr 1fr;
+  border-bottom: 1px solid rgba(181, 133, 82, 0.08);
+  padding: 24px 0;
+  align-items: center;
+  transition: background-color var(--duration) var(--ease-out);
+}
+.tableRow:hover {
+  background-color: rgba(181, 133, 82, 0.02);
+}
+.tableRow:last-child {
+  border-bottom: none;
+}
+
+.courseCol {
+  font-size: 15px;
+  color: var(--color-ivory);
+}
+
+.dateCol, .hoursCol {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  font-weight: 300;
+}
+
+.spotsCol {
+  font-size: 13px;
+}
+
+.actionCol {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.spotBadge {
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: 11px;
+  font-weight: 500;
+  border-radius: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.spotBadge.open {
+  background: rgba(46, 117, 89, 0.1);
+  color: #4ade80;
+  border: 1px solid rgba(46, 117, 89, 0.3);
+}
+.spotBadge.warning {
+  background: rgba(181, 133, 82, 0.1);
+  color: var(--color-gold);
+  border: 1px solid rgba(181, 133, 82, 0.3);
+}
+.spotBadge.closed {
+  background: rgba(220, 38, 38, 0.1);
+  color: #ef4444;
+  border: 1px solid rgba(220, 38, 38, 0.3);
+}
+
+.soldOut {
+  color: var(--color-text-muted);
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.calendarNote {
+  margin-top: 32px;
+  font-size: 13px;
+  color: var(--color-text-muted);
+  font-style: italic;
+  border-top: 1px dashed rgba(181, 133, 82, 0.15);
+  padding-top: 20px;
+}
+
+@media (max-width: 900px) {
+  .tableHeader {
+    display: none;
+  }
+  .tableRow {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 24px;
+    background: rgba(181, 133, 82, 0.02);
+    border: 1px solid var(--color-border);
+    border-radius: 2px;
+    margin-bottom: 16px;
+  }
+  .tableRow:last-child {
+    margin-bottom: 0;
+  }
+  .actionCol {
+    justify-content: flex-start;
+    margin-top: 8px;
+  }
+  .calendarContainer {
+    padding: 20px;
+  }
+}
+
 @media (max-width: 480px) {
   .grid {
     grid-template-columns: 1fr;
