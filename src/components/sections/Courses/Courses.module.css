@@ -34,6 +34,8 @@
   border-color: rgba(43, 29, 20, 0.4) !important;
   color: var(--color-bg-primary) !important;
   background: transparent !important;
+  width: 100%;
+  max-width: 280px;
 }
 .sidebarCta:hover {
   background: var(--color-bg-primary) !important;
