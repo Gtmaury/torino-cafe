@@ -1,8 +1,39 @@
 // src/app/layout.tsx
 import type { Metadata, Viewport } from 'next';
+import { Inter, Playfair_Display, Bodoni_Moda, Cormorant_Garamond } from 'next/font/google';
 import { Header } from '@/components/layout/Header/Header';
 import { Footer } from '@/components/layout/Footer/Footer';
 import './globals.css';
+
+// ── Google Fonts Configuration ──────────────────────────────
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600'],
+  variable: '--font-inter',
+  display: 'swap',
+});
+
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  style: ['normal', 'italic'],
+  variable: '--font-playfair',
+  display: 'swap',
+});
+
+const bodoni = Bodoni_Moda({
+  subsets: ['latin'],
+  weight: ['400', '500', '600'],
+  variable: '--font-bodoni',
+  display: 'swap',
+});
+
+const cormorant = Cormorant_Garamond({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600'],
+  variable: '--font-cormorant',
+  display: 'swap',
+});
 
 // ── SEO Metadata ─────────────────────────────────────────────
 export const metadata: Metadata = {
@@ -46,7 +77,11 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="es" suppressHydrationWarning>
+    <html
+      lang="es"
+      className={`${inter.variable} ${playfair.variable} ${bodoni.variable} ${cormorant.variable}`}
+      suppressHydrationWarning
+    >
       <body suppressHydrationWarning>
         <Header />
         <main id="main-content">{children}</main>

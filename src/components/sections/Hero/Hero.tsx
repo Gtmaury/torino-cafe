@@ -18,7 +18,7 @@ export function Hero() {
     <section id="inicio" className={styles.section} aria-labelledby="hero-title">
       {/* Background */}
       <div className={styles.bg}>
-        <video ref={videoRef} className={styles.bgVideo} autoPlay muted playsInline>
+        <video ref={videoRef} className={styles.bgVideo} autoPlay muted playsInline preload="auto">
           <source src="/videos/Hero-video_v3.mp4" type="video/mp4" />
         </video>
       </div>

@@ -3,6 +3,7 @@
 // Client Component — wraps carousel state and rendering
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { useCarousel } from '@/hooks/useCarousel';
 import { MACHINES } from '@/data/machines';
 import styles from './Machines.module.css';
@@ -78,9 +79,9 @@ export function MachinesCarousel() {
           Explora todas las máquinas con las que practicarás y perfeccionarás la técnica.
         </p>
 
-        <a href="#machines" className={styles.allLink} id="ver-todas-maquinas">
+        <Link href="/maquinas" className={styles.allLink} id="ver-todas-maquinas">
           Ver todas las máquinas
-        </a>
+        </Link>
       </div>
     </div>
   );
