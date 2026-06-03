@@ -40,6 +40,27 @@
   );
 }
 
+.bottomFade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 250px;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(20, 20, 20, 0.4) 40%,
+    rgba(20, 20, 20, 0.8) 75%,
+    var(--color-bg-secondary) 100%
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  mask-image: linear-gradient(to bottom, transparent, black 60%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black 60%);
+  z-index: 1;
+  pointer-events: none;
+}
+
 /* ── Content ────────────────────────────────────── */
 .content {
   position: relative;

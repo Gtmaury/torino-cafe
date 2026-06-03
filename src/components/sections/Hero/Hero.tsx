@@ -23,6 +23,7 @@ export function Hero() {
         </video>
       </div>
       <div className={styles.overlay} />
+      <div className={styles.bottomFade} />
 
       {/* Content */}
       <div className={`container ${styles.content}`}>
