@@ -47,7 +47,7 @@
 .card {
   background: var(--color-bg-secondary);
   border: 1px solid var(--color-border);
-  border-radius: 2px;
+  border-radius: 12px;
   padding: 40px;
   display: flex;
   flex-direction: column;
@@ -69,7 +69,7 @@
 .iconWrap {
   width: 56px;
   height: 56px;
-  border-radius: 2px;
+  border-radius: 8px;
   background: rgba(181, 133, 82, 0.08);
   border: 1px solid rgba(181, 133, 82, 0.2);
   color: var(--color-gold);
@@ -148,7 +148,7 @@
   border: 1px solid rgba(181, 133, 82, 0.25);
   padding: 60px 40px;
   text-align: center;
-  border-radius: 2px;
+  border-radius: 12px;
 }
 
 .bannerContent {

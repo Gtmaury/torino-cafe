@@ -52,7 +52,7 @@
   background: var(--color-bg-secondary);
   border: 1px solid var(--color-border);
   padding: 32px;
-  border-radius: 2px;
+  border-radius: 12px;
 }
 
 .moduleTitle {
@@ -99,7 +99,7 @@
   position: relative;
   height: 280px;
   background: #111;
-  border-radius: 2px;
+  border-radius: 12px;
   overflow: hidden;
   border: 1px solid var(--color-border);
 }
@@ -113,7 +113,7 @@
   background: var(--color-bg-secondary);
   border: 1px solid var(--color-border);
   padding: 32px;
-  border-radius: 2px;
+  border-radius: 12px;
 }
 
 .panelTitle {
@@ -170,7 +170,7 @@
   );
   border: 1px solid rgba(181, 133, 82, 0.25);
   padding: 36px;
-  border-radius: 2px;
+  border-radius: 12px;
   text-align: center;
 }
 

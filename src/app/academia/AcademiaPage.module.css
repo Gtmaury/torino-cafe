@@ -51,7 +51,7 @@
   position: relative;
   height: 380px;
   background: #111;
-  border-radius: 2px;
+  border-radius: 12px;
   overflow: hidden;
   border: 1px solid var(--color-border);
 }
@@ -86,7 +86,7 @@
   background: var(--color-bg-secondary);
   border: 1px solid var(--color-border);
   padding: 40px 32px;
-  border-radius: 2px;
+  border-radius: 12px;
   transition: border-color var(--duration) var(--ease-out);
 }
 .pillarCard:hover {
@@ -126,7 +126,7 @@
   border: 1px solid rgba(181, 133, 82, 0.25);
   padding: 60px 40px;
   text-align: center;
-  border-radius: 2px;
+  border-radius: 12px;
 }
 
 .bannerContent {
@@ -198,7 +198,7 @@
   background: var(--color-bg-secondary);
   border: 1px solid var(--color-border);
   padding: 40px;
-  border-radius: 2px;
+  border-radius: 12px;
   transition: border-color var(--duration) var(--ease-out), transform var(--duration) var(--ease-out);
 }
 
@@ -221,7 +221,7 @@
   font-size: 12px;
   font-weight: 600;
   padding: 6px 12px;
-  border-radius: 2px;
+  border-radius: 6px;
   letter-spacing: 1px;
 }
 
@@ -249,7 +249,7 @@
   position: relative;
   height: 260px;
   overflow: hidden;
-  border-radius: 2px;
+  border-radius: 12px;
   border: 1px solid var(--color-border);
 }
 
