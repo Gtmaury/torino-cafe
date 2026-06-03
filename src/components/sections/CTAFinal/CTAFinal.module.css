@@ -1,5 +1,5 @@
 .section {
-  padding: 24px 0 48px;
+  padding: 0 0 var(--section-py);
   background: var(--color-bg-primary);
   position: relative;
   overflow: hidden;
@@ -49,11 +49,6 @@
   flex-wrap: wrap;
 }
 
-@media (max-width: 768px) {
-  .section {
-    padding: 16px 0 32px;
-  }
-}
 
 @media (max-width: 500px) {
   .buttons { flex-direction: column; }
