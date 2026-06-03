@@ -1,7 +1,7 @@
 // src/app/blog/page.tsx
 import Image from 'next/image';
+import Link from 'next/link';
 import { SubpageHeader } from '@/components/ui/SubpageHeader/SubpageHeader';
-import { Button } from '@/components/ui/Button/Button';
 import { BLOG_POSTS } from '@/data/blog-posts';
 import styles from './BlogList.module.css';
 
@@ -27,33 +27,35 @@ export default function BlogListPage() {
 
           <div className={styles.grid}>
             {BLOG_POSTS.map((post) => (
-              <article key={post.id} className={styles.card}>
-                <div className={styles.imageWrap}>
-                  <Image
-                    src={post.image}
-                    alt={post.alt}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 400px"
-                    className={styles.image}
-                  />
-                </div>
-                <div className={styles.body}>
-                  <div className={styles.meta}>
-                    <span className={styles.category}>{post.category}</span>
-                    {post.date && <span className={styles.date}>{post.date}</span>}
+              <Link key={post.id} href={post.href} className={styles.cardLinkWrapper}>
+                <article className={styles.card}>
+                  <div className={styles.imageWrap}>
+                    <Image
+                      src={post.image}
+                      alt={post.alt}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 400px"
+                      className={styles.image}
+                    />
                   </div>
-                  
-                  <h2 className={styles.title}>{post.title}</h2>
-                  <p className={styles.excerpt}>{post.excerpt}</p>
-                  
-                  <div className={styles.footer}>
-                    {post.readTime && <span className={styles.readTime}>{post.readTime}</span>}
-                    <Button href={post.href} variant="ghost" size="sm" className={styles.cta}>
-                      Leer Artículo Completo &rarr;
-                    </Button>
+                  <div className={styles.body}>
+                    <div className={styles.meta}>
+                      <span className={styles.category}>{post.category}</span>
+                      {post.date && <span className={styles.date}>{post.date}</span>}
+                    </div>
+                    
+                    <h2 className={styles.title}>{post.title}</h2>
+                    <p className={styles.excerpt}>{post.excerpt}</p>
+                    
+                    <div className={styles.footer}>
+                      {post.readTime && <span className={styles.readTime}>{post.readTime}</span>}
+                      <div className={styles.cta}>
+                        Leer Artículo Completo &rarr;
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </article>
+                </article>
+              </Link>
             ))}
           </div>
         </div>

@@ -47,32 +47,39 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
         <div className="container">
           <div className={styles.wrapper}>
             
-            {/* Meta Info */}
-            <div className={styles.meta}>
-              <span className={styles.category}>{post.category}</span>
-              {post.date && <span className={styles.date}>{post.date}</span>}
-              {post.readTime && <span className={styles.readTime}>{post.readTime}</span>}
-            </div>
+            <div className={styles.grid}>
+              {/* Left: Featured Image */}
+              <div className={styles.leftCol}>
+                <div className={styles.imageWrap}>
+                  <Image
+                    src={post.image}
+                    alt={post.alt}
+                    fill
+                    sizes="(max-width: 900px) 100vw, 600px"
+                    priority
+                    className={styles.image}
+                  />
+                </div>
+              </div>
 
-            {/* Featured Image */}
-            <div className={styles.imageWrap}>
-              <Image
-                src={post.image}
-                alt={post.alt}
-                fill
-                sizes="(max-width: 900px) 100vw, 900px"
-                priority
-                className={styles.image}
-              />
-            </div>
+              {/* Right: Meta & Scrolling Content */}
+              <div className={styles.rightCol}>
+                <div className={styles.meta}>
+                  <span className={styles.category}>{post.category}</span>
+                  {post.date && <span className={styles.date}>{post.date}</span>}
+                  {post.readTime && <span className={styles.readTime}>{post.readTime}</span>}
+                </div>
 
-            {/* Content Body */}
-            <div className={styles.bodyContent}>
-              {post.content && post.content.map((paragraph, idx) => (
-                <p key={idx} className={styles.paragraph}>
-                  {paragraph}
-                </p>
-              ))}
+                <div className={styles.bodyScroll}>
+                  <div className={styles.bodyContent}>
+                    {post.content && post.content.map((paragraph, idx) => (
+                      <p key={idx} className={styles.paragraph}>
+                        {paragraph}
+                      </p>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* CTA/Footer area inside the post */}

@@ -20,8 +20,8 @@ export async function generateMetadata({ params }: MachineDetailPageProps) {
   if (!machine) return {};
 
   return {
-    title: `${machine.brand} ${machine.model} — Ficha Técnica`,
-    description: `Conoce las especificaciones, historia y características de la máquina espresso profesional ${machine.brand} ${machine.model}.`,
+    title: `${machine.brand} ${machine.model} — Características Clave`,
+    description: `Conoce las características de la máquina espresso profesional ${machine.brand} ${machine.model}.`,
   };
 }
 
@@ -47,7 +47,7 @@ export default async function MachineDetailPage({ params }: MachineDetailPagePro
         <div className="container">
           <div className={styles.grid}>
             
-            {/* Left: Image and Key Features */}
+            {/* Left: Image */}
             <div className={styles.leftCol}>
               <div className={styles.imageWrap}>
                 <Image
@@ -59,7 +59,10 @@ export default async function MachineDetailPage({ params }: MachineDetailPagePro
                   className={styles.image}
                 />
               </div>
+            </div>
 
+            {/* Right: Key Features & CTA */}
+            <div className={styles.rightCol}>
               {machine.features && machine.features.length > 0 && (
                 <div className={styles.featuresBox}>
                   <h3 className={styles.subtitle}>Características Clave</h3>
@@ -73,70 +76,13 @@ export default async function MachineDetailPage({ params }: MachineDetailPagePro
                       </li>
                     ))}
                   </ul>
+                  <div className={styles.ctaWrapper}>
+                    <Button href="/#contacto" size="lg" className={styles.ctaBtn}>
+                      Inscribirme a Cursos
+                    </Button>
+                  </div>
                 </div>
               )}
-            </div>
-
-            {/* Right: Technical Specs and History */}
-            <div className={styles.rightCol}>
-              
-              {/* History/Role in Academy */}
-              <div className={styles.box}>
-                <h3 className={styles.title}>Historia y Rol en la Academia</h3>
-                <p className={styles.historyText}>{machine.history}</p>
-              </div>
-
-              {/* Specs Table */}
-              {machine.specs && (
-                <div className={styles.box}>
-                  <h3 className={styles.title}>Especificaciones Técnicas</h3>
-                  <table className={styles.table}>
-                    <tbody>
-                      <tr>
-                        <th>Marca</th>
-                        <td>{machine.brand}</td>
-                      </tr>
-                      <tr>
-                        <th>Modelo</th>
-                        <td>{machine.model}</td>
-                      </tr>
-                      <tr>
-                        <th>Caldera</th>
-                        <td>{machine.specs.caldera}</td>
-                      </tr>
-                      <tr>
-                        <th>Presión de agua</th>
-                        <td>{machine.specs.presion}</td>
-                      </tr>
-                      <tr>
-                        <th>Consumo eléctrico</th>
-                        <td>{machine.specs.potencia}</td>
-                      </tr>
-                      <tr>
-                        <th>Origen</th>
-                        <td>{machine.specs.origen}</td>
-                      </tr>
-                      <tr>
-                        <th>Dimensiones</th>
-                        <td>{machine.specs.dimensiones}</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              )}
-
-              {/* CTA */}
-              <div className={styles.ctaBox}>
-                <p className={styles.ctaText}>
-                  ¿Quieres practicar y perfeccionar tu técnica de calibración barista usando la <strong>{machine.brand} {machine.model}</strong>?
-                </p>
-                <div className={styles.ctaButtons}>
-                  <Button href="#contacto" size="lg">
-                    Inscribirme a Cursos
-                  </Button>
-                </div>
-              </div>
-
             </div>
 
           </div>

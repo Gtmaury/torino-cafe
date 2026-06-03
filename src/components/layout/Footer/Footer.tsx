@@ -16,10 +16,7 @@ export function Footer() {
               <p className={styles.brandName}>TORINO <em>CAFFÈ</em></p>
               <p className={styles.brandSub}>ACADEMY</p>
             </div>
-            <p className={styles.brandDesc}>
-              Academia especializada en formación barista y cultura del espresso italiano.
-              Formamos con protocolo INEI y SCA, y transmitimos la cultura del espresso.
-            </p>
+
             <ul className={styles.socials} aria-label="Redes sociales">
               {SOCIAL_LINKS.map(({ id, label, href }) => (
                 <li key={id}>
@@ -139,20 +136,11 @@ function SocialIcon({ id }: { id: string }) {
       <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/>
     </svg>
   );
-  if (id === 'facebook') return (
+  if (id === 'whatsapp') return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" width="16" height="16">
-      <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+      <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+      <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
     </svg>
   );
-  if (id === 'tiktok') return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" width="16" height="16">
-      <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/>
-    </svg>
-  );
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" width="16" height="16">
-      <path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.97C18.88 4 12 4 12 4s-6.88 0-8.59.45A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.4a2.78 2.78 0 001.95-1.97A29 29 0 0023 12a29 29 0 00-.46-5.58z"/>
-      <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/>
-    </svg>
-  );
+  return null;
 }

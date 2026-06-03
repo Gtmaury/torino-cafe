@@ -19,6 +19,13 @@
   gap: 36px;
 }
 
+.cardLinkWrapper {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+}
+
 .card {
   background: var(--color-bg-secondary);
   border: 1px solid var(--color-border);
@@ -29,7 +36,7 @@
   height: 100%;
   transition: border-color var(--duration) var(--ease-out);
 }
-.card:hover {
+.cardLinkWrapper:hover .card {
   border-color: var(--color-gold);
 }
 
@@ -44,7 +51,7 @@
   object-fit: cover;
   transition: transform 0.6s var(--ease-out);
 }
-.card:hover .image {
+.cardLinkWrapper:hover .image {
   transform: scale(1.04);
 }
 
@@ -108,13 +115,22 @@
 }
 
 .cta {
-  border-color: transparent !important;
-  padding: 8px 0 !important;
-  color: var(--color-gold) !important;
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-body);
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  line-height: 1;
+  font-size: 10px;
+  padding: 8px 0;
+  color: var(--color-gold);
+  transition: color var(--duration) var(--ease-out);
 }
-.cta:hover {
-  color: var(--color-gold-hover) !important;
-  background: transparent !important;
+.cardLinkWrapper:hover .cta {
+  color: var(--color-gold-hover);
 }
 
 @media (max-width: 480px) {

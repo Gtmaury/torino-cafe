@@ -23,6 +23,7 @@ export const MACHINES: Machine[] = [
       'Grupos saturados para máxima estabilidad térmica en extracciones continuas',
       'Control electrónico de temperatura PID dual',
       'Cronómetro de extracción integrado por grupo y pantalla LCD intuitiva',
+      'Economizador de agua caliente y caldera de vapor aislada térmicamente',
     ],
   },
   {
@@ -46,6 +47,7 @@ export const MACHINES: Machine[] = [
       'Sistema de recuperación de energía térmica TERS (recicla calor del desagüe)',
       'Pantallas táctiles individuales por grupo con interfaz de usuario avanzada',
       'Diseño ultracompacto y minimalista para una mejor conexión visual con el cliente',
+      'Lanzas de vapor aisladas Cold Touch con mandos de purga rápida',
     ],
   },
   {
@@ -69,6 +71,7 @@ export const MACHINES: Machine[] = [
       'Sistema multibojler con control PID independiente por grupo y caldera de vapor',
       'Conectividad Bluetooth para telemetría y configuración a través de aplicación móvil',
       'Control de caudal mediante medidor electromagnético de alta precisión',
+      'Lanzas de vapor de competición con aislamiento térmico y flujo ajustable',
     ],
   },
   {
@@ -92,6 +95,7 @@ export const MACHINES: Machine[] = [
       'Doble sistema de control: palanca mecánica clásica y pantalla táctil digital',
       'Portafiltros ergonómicos con inclinación optimizada para la muñeca del barista',
       'Lanzas de vapor de tacto frío "Cold Touch" para mayor seguridad y comodidad',
+      'Calderas independientes de acero inoxidable con aislamiento de alta eficiencia',
     ],
   },
   {
@@ -115,6 +119,7 @@ export const MACHINES: Machine[] = [
       'Lanzas de vapor Easy Cream para texturización semiautomática de leche',
       'Grupos elevados que permiten trabajar con vasos de hasta 12 oz directamente',
       'Aislamiento térmico avanzado que reduce el consumo de energía en un 13%',
+      'Espejo invertido integrado para control visual de la erogación sin agacharse',
     ],
   },
 ];

@@ -50,7 +50,5 @@ export const CONTACT_INFO = {
 
 export const SOCIAL_LINKS = [
   { id: 'instagram', label: 'Instagram', href: 'https://instagram.com/torinocaffeacademy' },
-  { id: 'facebook',  label: 'Facebook',  href: 'https://facebook.com/torinocaffeacademy' },
-  { id: 'tiktok',    label: 'TikTok',    href: 'https://tiktok.com/@torinocaffeacademy' },
-  { id: 'youtube',   label: 'YouTube',   href: 'https://youtube.com/torinocaffeacademy' },
+  { id: 'whatsapp',  label: 'WhatsApp',  href: 'https://wa.me/573001234587' },
 ];

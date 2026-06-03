@@ -19,6 +19,13 @@
   gap: 36px;
 }
 
+.cardLinkWrapper {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+}
+
 .card {
   background: var(--color-bg-secondary);
   border: 1px solid var(--color-border);
@@ -29,7 +36,7 @@
   height: 100%;
   transition: border-color var(--duration) var(--ease-out);
 }
-.card:hover {
+.cardLinkWrapper:hover .card {
   border-color: var(--color-gold);
 }
 
@@ -44,7 +51,7 @@
   object-fit: cover;
   transition: transform 0.6s var(--ease-out);
 }
-.card:hover .image {
+.cardLinkWrapper:hover .image {
   transform: scale(1.04);
 }
 
@@ -102,6 +109,33 @@
 
 .cta {
   display: flex;
+}
+.ctaBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: var(--font-body);
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  line-height: 1;
+  font-size: 12px;
+  padding: 14px 30px;
+  background: var(--color-gold);
+  color: var(--color-bg-primary);
+  transition: background var(--duration) var(--ease-out),
+              color var(--duration) var(--ease-out),
+              transform var(--duration) var(--ease-out),
+              box-shadow var(--duration) var(--ease-out);
+}
+.cardLinkWrapper:hover .ctaBtn {
+  background: var(--color-gold-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(181, 133, 82, 0.35);
 }
 
 @media (max-width: 480px) {

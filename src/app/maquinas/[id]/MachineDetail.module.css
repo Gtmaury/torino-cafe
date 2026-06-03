@@ -8,23 +8,29 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
-  align-items: start;
+  align-items: stretch;
 }
 
-.leftCol {}
+.leftCol {
+  height: 100%;
+}
 
 .imageWrap {
   position: relative;
-  height: 380px;
+  height: 100%;
+  min-height: 380px;
   background: #111;
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid var(--color-border);
-  margin-bottom: 40px;
 }
 
 .image {
   object-fit: cover;
+}
+
+.rightCol {
+  height: 100%;
 }
 
 .featuresBox {
@@ -32,6 +38,9 @@
   border: 1px solid var(--color-border);
   padding: 32px;
   border-radius: 12px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .subtitle {
@@ -46,6 +55,7 @@
   display: flex;
   flex-direction: column;
   gap: 14px;
+  flex-grow: 1;
 }
 
 .featureItem {
@@ -66,99 +76,16 @@
   margin-top: 3px;
 }
 
-.rightCol {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-
-.box {
-  background: var(--color-bg-secondary);
-  border: 1px solid var(--color-border);
-  padding: 36px;
-  border-radius: 12px;
-}
-
-.title {
-  font-family: var(--font-heading);
-  font-size: 24px;
-  color: var(--color-gold);
-  font-weight: 400;
-  margin-bottom: 18px;
-}
-
-.historyText {
-  font-size: 14.5px;
-  color: var(--color-text-secondary);
-  line-height: 1.75;
-  font-weight: 300;
-}
-
-/* Specs Table */
-.table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.table th, .table td {
-  padding: 12px 0;
-  font-size: 13.5px;
-  border-bottom: 1px solid rgba(181, 133, 82, 0.1);
-}
-
-.table th {
-  text-align: left;
-  color: var(--color-text-muted);
-  font-weight: 500;
-  width: 35%;
-}
-
-.table td {
-  color: var(--color-ivory);
-  font-weight: 300;
-}
-
-.table tr:last-child th, .table tr:last-child td {
-  border-bottom: none;
-}
-
 /* CTA */
-.ctaBox {
-  background: radial-gradient(
-    circle at 50% 50%,
-    rgba(181, 133, 82, 0.08) 0%,
-    rgba(26, 18, 13, 0.2) 100%
-  );
-  border: 1px solid rgba(181, 133, 82, 0.25);
-  padding: 36px;
-  border-radius: 12px;
-  text-align: center;
-}
-
-.ctaText {
-  font-size: 14.5px;
-  color: var(--color-text-secondary);
-  line-height: 1.7;
-  margin-bottom: 24px;
-  font-weight: 300;
-}
-.ctaText strong {
-  color: var(--color-gold);
-  font-weight: 500;
-}
-
-.ctaButtons {
+.ctaWrapper {
+  margin-top: 32px;
   display: flex;
-  justify-content: center;
 }
 
 @media (max-width: 900px) {
   .grid {
     grid-template-columns: 1fr;
     gap: 40px;
-  }
-  .box {
-    padding: 24px;
   }
   .featuresBox {
     padding: 24px;
