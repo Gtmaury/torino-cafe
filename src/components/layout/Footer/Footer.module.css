@@ -153,6 +153,30 @@
   font-weight: 300;
 }
 
+.powered {
+  font-size: 11px;
+  color: var(--color-text-muted);
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.heart {
+  display: inline-block;
+  line-height: 1;
+}
+
+.techLink {
+  color: var(--color-text-muted);
+  font-weight: 400;
+  transition: color var(--duration) var(--ease-out);
+}
+
+.techLink:hover {
+  color: #a855f7; /* turns purple on hover */
+}
+
 .legal {
   display: flex;
   gap: 24px;

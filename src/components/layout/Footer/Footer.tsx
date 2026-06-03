@@ -79,6 +79,17 @@ export function Footer() {
           <p className={styles.copy}>
             &copy; {new Date().getFullYear()} Torino Caffè Academy. Todos los derechos reservados.
           </p>
+          <p className={styles.powered}>
+            Powered with <span className={styles.heart}>💜</span> by{' '}
+            <a
+              href="https://www.untitledtechcompany.io/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.techLink}
+            >
+              Untitled Tech Company
+            </a>
+          </p>
           <nav className={styles.legal} aria-label="Legal">
             <Link href="/politicas-privacidad">Políticas de privacidad</Link>
             <Link href="/terminos-condiciones">Términos y condiciones</Link>
