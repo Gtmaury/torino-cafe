@@ -43,19 +43,31 @@
   gap: 28px;
 }
 
-/* Card */
 .card {
   background: var(--color-bg-secondary);
-  border: 1px solid var(--color-border);
   border-radius: 12px;
   overflow: hidden;
   cursor: pointer;
-  transition: border-color var(--duration) var(--ease-out);
+  position: relative;
   height: 100%;
   display: flex;
   flex-direction: column;
 }
-.card:hover { border-color: var(--color-gold); }
+
+.card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  pointer-events: none;
+  z-index: 2;
+  transition: border-color var(--duration) var(--ease-out);
+}
+
+.card:hover::after {
+  border-color: var(--color-gold);
+}
 
 .cardImg {
   position: relative;

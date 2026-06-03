@@ -44,17 +44,30 @@
   flex: 0 0 calc(20% - 16px);
   min-width: 220px;
   background: var(--color-bg-card);
-  border: 1px solid rgba(43,29,20,0.6);
   border-radius: 12px;
   overflow: hidden;
-  transition: border-color var(--duration) var(--ease-out),
-              transform var(--duration) var(--ease-out),
+  position: relative;
+  transition: transform var(--duration) var(--ease-out),
               box-shadow var(--duration) var(--ease-out);
   cursor: pointer;
 }
 
-.card:hover {
+.card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(43,29,20,0.6);
+  border-radius: 12px;
+  pointer-events: none;
+  z-index: 2;
+  transition: border-color var(--duration) var(--ease-out);
+}
+
+.card:hover::after {
   border-color: var(--color-gold);
+}
+
+.card:hover {
   transform: translateY(-6px);
   box-shadow: 0 20px 50px rgba(0,0,0,0.6);
 }

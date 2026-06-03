@@ -28,15 +28,26 @@
 
 .card {
   background: var(--color-bg-secondary);
-  border: 1px solid var(--color-border);
   border-radius: 12px;
   overflow: hidden;
+  position: relative;
   display: flex;
   flex-direction: column;
   height: 100%;
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  pointer-events: none;
+  z-index: 2;
   transition: border-color var(--duration) var(--ease-out);
 }
-.cardLinkWrapper:hover .card {
+
+.cardLinkWrapper:hover .card::after {
   border-color: var(--color-gold);
 }
 
