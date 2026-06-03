@@ -18,7 +18,7 @@ export function Courses() {
             <h2 className={styles.title} id="cursos-title">
               Cursos diseñados para cada nivel.
             </h2>
-            <Button href="/cursos" variant="ghost" size="sm" className={styles.sidebarCta} id="ver-todos-cursos">
+            <Button href="/cursos" variant="ghost" className={styles.sidebarCta} id="ver-todos-cursos">
               Ver todos los cursos
             </Button>
           </RevealOnScroll>
