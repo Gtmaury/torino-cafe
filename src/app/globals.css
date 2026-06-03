@@ -69,6 +69,12 @@ a     { text-decoration: none; color: inherit; }
 ul    { list-style: none; }
 button { cursor: pointer; font-family: inherit; }
 
+/* Offset for sticky header when navigating via hash anchors */
+section[id],
+#espacio {
+  scroll-margin-top: 100px;
+}
+
 /* ── Global Utilities ───────────────────────────────────────── */
 .container {
   max-width: var(--container-max);

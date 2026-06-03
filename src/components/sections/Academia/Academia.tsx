@@ -117,7 +117,7 @@ export function Academia() {
             del espresso.
           </p>
           <Button href="/academia" variant="ghost" id="academia-cta" className={styles.cta}>
-            Conoce más sobre la Academia &rarr;
+            Conoce la Academia &rarr;
           </Button>
         </div>
 
