@@ -49,6 +49,10 @@
 
 .text:last-of-type { margin-bottom: 40px; }
 
+.cta {
+  align-self: flex-start;
+}
+
 .imageWrap {
   position: relative;
   overflow: hidden;

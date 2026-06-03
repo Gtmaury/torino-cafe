@@ -75,10 +75,6 @@ export function MachinesCarousel() {
           </button>
         </div>
 
-        <p className={styles.footerText}>
-          Explora todas las máquinas con las que practicarás y perfeccionarás la técnica.
-        </p>
-
         <Link href="/maquinas" className={styles.allLink} id="ver-todas-maquinas">
           Ver todas las máquinas
         </Link>

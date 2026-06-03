@@ -100,7 +100,7 @@ export default function AcademiaPage() {
               <span className={styles.tag}>Las Instalaciones / El Espacio</span>
               <h2 className={styles.heading}>Un Taller Barista Diseñado para la Excelencia</h2>
               <p className={styles.paragraph}>
-                Nuestras instalaciones en Bogotá están diseñadas para simular el entorno de trabajo real de una cafetería de especialidad de alto volumen. Cada alumno dispone de una <strong>estación individual de barista</strong>, evitando tiempos de espera y maximizando la práctica real con la máquina.
+                Nuestras instalaciones en Valencia, Venezuela están diseñadas para simular el entorno de trabajo real de una cafetería de especialidad de alto volumen. Cada alumno dispone de una <strong>estación individual de barista</strong>, evitando tiempos de espera y maximizando la práctica real con la máquina.
               </p>
               <p className={styles.paragraph}>
                 Contamos con maquinaria icónica calibrada diariamente: máquinas multiboiler de marcas referentes como <strong>La Marzocco Linea PB</strong>, <strong>Victoria Arduino Eagle One</strong>, <strong>Sanremo</strong>, y molinos de molienda micrométrica de alta precisión.
@@ -189,7 +189,7 @@ export default function AcademiaPage() {
             <div className={styles.bannerContent}>
               <h3 className={styles.bannerHeading}>¿Quieres conocer nuestras instalaciones?</h3>
               <p className={styles.bannerText}>
-                Te invitamos a agendar una visita personalizada a nuestros talleres en Bogotá y conversar con nuestros instructores sobre tus metas profesionales.
+                Te invitamos a agendar una visita personalizada a nuestros talleres en Valencia, Venezuela y conversar con nuestros instructores sobre tus metas profesionales.
               </p>
               <div className={styles.bannerCtas}>
                 <Button href="/#contacto" size="lg">

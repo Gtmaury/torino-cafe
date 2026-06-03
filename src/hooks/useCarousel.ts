@@ -46,8 +46,21 @@ export function useCarousel({ total, visibleFn }: UseCarouselOptions): UseCarous
     setCurrent(clamp(index, 0, maxIndex));
   }, [maxIndex]);
 
-  const prev = useCallback(() => goTo(current - 1), [current, goTo]);
-  const next = useCallback(() => goTo(current + 1), [current, goTo]);
+  const prev = useCallback(() => {
+    if (current <= 0) {
+      goTo(maxIndex);
+    } else {
+      goTo(current - 1);
+    }
+  }, [current, maxIndex, goTo]);
+
+  const next = useCallback(() => {
+    if (current >= maxIndex) {
+      goTo(0);
+    } else {
+      goTo(current + 1);
+    }
+  }, [current, maxIndex, goTo]);
 
   // Translate the track
   useEffect(() => {
@@ -68,7 +81,13 @@ export function useCarousel({ total, visibleFn }: UseCarouselOptions): UseCarous
     const onTouchStart = (e: TouchEvent) => { startX = e.touches[0].clientX; };
     const onTouchEnd   = (e: TouchEvent) => {
       const diff = startX - e.changedTouches[0].clientX;
-      if (Math.abs(diff) > 50) goTo(current + (diff > 0 ? 1 : -1));
+      if (Math.abs(diff) > 50) {
+        if (diff > 0) {
+          next();
+        } else {
+          prev();
+        }
+      }
     };
 
     track.addEventListener('touchstart', onTouchStart, { passive: true });
@@ -77,12 +96,12 @@ export function useCarousel({ total, visibleFn }: UseCarouselOptions): UseCarous
       track.removeEventListener('touchstart', onTouchStart);
       track.removeEventListener('touchend',   onTouchEnd);
     };
-  }, [current, goTo]);
+  }, [next, prev]);
 
   return {
     current,
-    canPrev: current > 0,
-    canNext: current < maxIndex,
+    canPrev: maxIndex > 0,
+    canNext: maxIndex > 0,
     goTo,
     prev,
     next,

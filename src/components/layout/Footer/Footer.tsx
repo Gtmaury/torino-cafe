@@ -47,7 +47,7 @@ export function Footer() {
             <p className={styles.colTitle}>Contacto</p>
             <address className={styles.contactList} aria-label="Dirección y contacto">
               <ContactItem icon="map">
-                <a href="https://maps.google.com/?q=Carrera+123+%2345-67,+Bogota,+Colombia" target="_blank" rel="noopener noreferrer" className={styles.contactLink}>
+                <a href="https://maps.google.com/?q=Valencia,+Venezuela" target="_blank" rel="noopener noreferrer" className={styles.contactLink}>
                   {CONTACT_INFO.address}
                 </a>
               </ContactItem>

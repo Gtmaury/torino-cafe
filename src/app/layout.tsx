@@ -3,6 +3,7 @@ import type { Metadata, Viewport } from 'next';
 import { Inter, Playfair_Display, Bodoni_Moda, Cormorant_Garamond } from 'next/font/google';
 import { Header } from '@/components/layout/Header/Header';
 import { Footer } from '@/components/layout/Footer/Footer';
+import { WhatsAppButton } from '@/components/ui/WhatsAppButton/WhatsAppButton';
 import './globals.css';
 
 // ── Google Fonts Configuration ──────────────────────────────
@@ -86,6 +87,7 @@ export default function RootLayout({
         <Header />
         <main id="main-content">{children}</main>
         <Footer />
+        <WhatsAppButton />
       </body>
     </html>
   );

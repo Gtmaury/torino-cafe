@@ -127,10 +127,10 @@ export default async function CourseDetailPage({ params }: CourseDetailPageProps
                   Reserva tu cupo para la próxima sesión de <strong>{course.title}</strong> o ponte en contacto con nuestros coordinadores para recibir más información.
                 </p>
                 <div className={styles.ctaButtons}>
-                  <Button href="mailto:hola@torinocaffeacademy.com" size="lg">
+                  <Button href="mailto:info@torinocaffe.info" size="lg">
                     Inscribirme Ahora
                   </Button>
-                  <Button href="tel:+573001234567" variant="outline" size="lg">
+                  <Button href="https://wa.me/584123000970" variant="outline" size="lg">
                     Preguntar por WhatsApp
                   </Button>
                 </div>

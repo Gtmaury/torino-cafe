@@ -116,7 +116,7 @@ export function Academia() {
             y cultura en una experiencia diseñada para formar profesionales y apasionados
             del espresso.
           </p>
-          <Button href="/academia" variant="ghost" id="academia-cta">
+          <Button href="/academia" variant="ghost" id="academia-cta" className={styles.cta}>
             Conoce más sobre la Academia &rarr;
           </Button>
         </div>

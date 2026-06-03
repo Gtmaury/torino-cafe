@@ -60,7 +60,7 @@ export default function PrivacyPolicyPage() {
 
               <h2>5. Contacto</h2>
               <p>
-                Si tiene preguntas adicionales o requiere más información sobre nuestra Política de Privacidad, no dude en ponerse en contacto con nuestro oficial de protección de datos a través del correo electrónico: <strong>hola@torinocaffeacademy.com</strong>.
+                Si tiene preguntas adicionales o requiere más información sobre nuestra Política de Privacidad, no dude en ponerse en contacto con nuestro oficial de protección de datos a través del correo electrónico: <strong>info@torinocaffe.info</strong>.
               </p>
             </div>
           </div>

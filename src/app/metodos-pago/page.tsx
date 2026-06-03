@@ -34,7 +34,7 @@ export default function PaymentMethodsPage() {
                 <li>Diners Club</li>
               </ul>
               <p>
-                Los pagos presenciales pueden realizarse directamente en las oficinas de nuestra sede de Baristas en Bogotá,
+                Los pagos presenciales pueden realizarse directamente en las oficinas de nuestra sede de Baristas en Valencia, Venezuela,
                 y los pagos virtuales se procesan a través de una pasarela de pago segura con cifrado SSL de 256 bits para proteger tu información.
               </p>
 
@@ -42,7 +42,7 @@ export default function PaymentMethodsPage() {
               <p>
                 Puedes realizar transferencia electrónica directa a nuestras cuentas de ahorros corporativas.
                 Una vez realizada la transferencia, deberás enviar una copia del comprobante digital a nuestro correo
-                <strong>hola@torinocaffeacademy.com</strong> con tu nombre completo y el nombre del curso de barista elegido para confirmar la matrícula.
+                <strong>info@torinocaffe.info</strong> con tu nombre completo y el nombre del curso de barista elegido para confirmar la matrícula.
               </p>
 
               <h2>2. Pago en Cuotas y Financiamiento</h2>
@@ -63,7 +63,7 @@ export default function PaymentMethodsPage() {
 
               <h2>4. Dudas y Consultas de Pago</h2>
               <p>
-                Si tienes preguntas sobre la facturación de matrículas, cuentas bancarias autorizadas o necesitas estructurar un plan de financiamiento a tu medida, no dudes en escribirnos a <strong>hola@torinocaffeacademy.com</strong>.
+                Si tienes preguntas sobre la facturación de matrículas, cuentas bancarias autorizadas o necesitas estructurar un plan de financiamiento a tu medida, no dudes en escribirnos a <strong>info@torinocaffe.info</strong>.
               </p>
             </div>
           </div>

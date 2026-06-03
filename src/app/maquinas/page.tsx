@@ -1,8 +1,6 @@
 // src/app/maquinas/page.tsx
-import Image from 'next/image';
-import Link from 'next/link';
 import { SubpageHeader } from '@/components/ui/SubpageHeader/SubpageHeader';
-import { MACHINES } from '@/data/machines';
+import { MachinesCatalogCarousel } from './MachinesCatalogCarousel';
 import styles from './Catalog.module.css';
 
 export const metadata = {
@@ -13,7 +11,7 @@ export const metadata = {
 export default function MachinesCatalogPage() {
   return (
     <>
-      <SubpageHeader title="Nuestras Máquinas" breadcrumbs={[{ label: 'Máquinas' }]} />
+      <SubpageHeader title="Nuestros Equipos" breadcrumbs={[{ label: 'Máquinas' }]} />
 
       <section className={styles.section}>
         <div className="container">
@@ -25,41 +23,7 @@ export default function MachinesCatalogPage() {
             </p>
           </div>
 
-          <div className={styles.grid}>
-            {MACHINES.map((machine) => (
-              <Link key={machine.id} href={machine.href} className={styles.cardLinkWrapper}>
-                <article className={styles.card}>
-                  <div className={styles.imageWrap}>
-                    <Image
-                      src={machine.image}
-                      alt={machine.alt}
-                      fill
-                      sizes="(max-width: 768px) 100vw, 400px"
-                      className={styles.image}
-                    />
-                  </div>
-                  <div className={styles.body}>
-                    <p className={styles.brand}>{machine.brand}</p>
-                    <h2 className={styles.model}>{machine.model}</h2>
-                    <p className={styles.desc}>{machine.description}</p>
-                    
-                    {machine.specs && (
-                      <div className={styles.specPreview}>
-                        <span className={styles.specItem}><strong>Origen:</strong> {machine.specs.origen}</span>
-                        <span className={styles.specItem}><strong>Presión:</strong> {machine.specs.presion}</span>
-                      </div>
-                    )}
-
-                    <div className={styles.cta}>
-                      <div className={styles.ctaBtn}>
-                        Características Clave
-                      </div>
-                    </div>
-                  </div>
-                </article>
-              </Link>
-            ))}
-          </div>
+          <MachinesCatalogCarousel />
         </div>
       </section>
     </>

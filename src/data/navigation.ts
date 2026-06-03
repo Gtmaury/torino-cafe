@@ -6,7 +6,6 @@ export const NAV_LINKS: NavLink[] = [
   { label: 'Academia',    href: '/#academia' },
   { label: 'Cursos',      href: '/#cursos' },
   { label: 'Máquinas',    href: '/#machines' },
-  { label: 'Experiencia', href: '/experiencia' },
   { label: 'Blog',        href: '/#blog' },
   { label: 'Contacto',    href: '/#contacto' },
 ];
@@ -30,25 +29,16 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
       { label: 'Preguntas frecuentes',  href: '/preguntas-frecuentes' },
     ],
   },
-  {
-    title: 'Experiencia',
-    links: [
-      { label: 'Máquinas',  href: '/maquinas' },
-      { label: 'Espacio',   href: '/academia#espacio' },
-      { label: 'Galería',   href: '/academia#galeria' },
-      { label: 'Blog',      href: '/blog' },
-    ],
-  },
 ];
 
 export const CONTACT_INFO = {
-  address:  'Carrera 123 #45-67, Bogotá, Colombia',
-  phone:    '+57 300 123 4587',
-  email:    'hola@torinocaffeacademy.com',
+  address:  'Valencia, Venezuela',
+  phone:    '+58 412-3000970',
+  email:    'info@torinocaffe.info',
   ctaLabel: 'Reserva tu Visita',
 };
 
 export const SOCIAL_LINKS = [
-  { id: 'instagram', label: 'Instagram', href: 'https://instagram.com/torinocaffeacademy' },
-  { id: 'whatsapp',  label: 'WhatsApp',  href: 'https://wa.me/573001234587' },
+  { id: 'instagram', label: 'Instagram', href: 'https://www.instagram.com/torinoacademy.ve?igsh=MW5xY2s2bWp2Z3c5cQ%3D%3D' },
+  { id: 'whatsapp',  label: 'WhatsApp',  href: 'https://wa.me/584123000970' },
 ];

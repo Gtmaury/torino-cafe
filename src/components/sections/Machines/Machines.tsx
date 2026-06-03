@@ -13,10 +13,6 @@ export function Machines() {
           <h2 className={styles.title} id="machines-title">
             Tecnología al servicio del aprendizaje.
           </h2>
-          <p className={styles.subtitle}>
-            La formación profesional requiere herramientas profesionales.
-            Nuestros estudiantes practican con equipos reconocidos internacionalmente.
-          </p>
         </RevealOnScroll>
 
         <RevealOnScroll delay={1}>

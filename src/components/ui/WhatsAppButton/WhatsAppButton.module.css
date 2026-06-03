@@ -1,0 +1,49 @@
+/* src/components/ui/WhatsAppButton/WhatsAppButton.module.css */
+.floatBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 56px;
+  height: 56px;
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-gold);
+  z-index: 999;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+  transition: border-color var(--duration) var(--ease-out),
+              color var(--duration) var(--ease-out),
+              background-color var(--duration) var(--ease-out),
+              transform var(--duration) var(--ease-out),
+              box-shadow var(--duration) var(--ease-out);
+}
+
+.floatBtn:hover {
+  border-color: var(--color-gold);
+  background-color: var(--color-bg-secondary);
+  color: var(--color-gold-hover);
+  transform: translateY(-3px) scale(1.06);
+  box-shadow: 0 10px 30px rgba(181, 133, 82, 0.3);
+}
+
+.icon {
+  width: 26px;
+  height: 26px;
+}
+
+@media (max-width: 768px) {
+  .floatBtn {
+    bottom: 24px;
+    right: 24px;
+    width: 48px;
+    height: 48px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  }
+  .icon {
+    width: 22px;
+    height: 22px;
+  }
+}

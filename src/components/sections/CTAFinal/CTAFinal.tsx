@@ -20,14 +20,14 @@ export function CTAFinal() {
           </p>
           <div className={styles.buttons}>
             <Button
-              href="mailto:hola@torinocaffeacademy.com"
+              href="mailto:info@torinocaffe.info"
               size="lg"
               id="cta-solicitar"
             >
               Solicitar Información
             </Button>
             <Button
-              href="tel:+573001234567"
+              href="https://wa.me/584123000970"
               variant="outline"
               size="lg"
               id="cta-agendar"

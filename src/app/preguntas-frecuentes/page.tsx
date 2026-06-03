@@ -60,7 +60,7 @@ export default function FAQPage() {
               <h2 style={{ marginTop: '20px' }}>¿Aún tienes dudas?</h2>
               <p>
                 Si no encuentras la respuesta a tu inquietud específica, escríbenos directamente a través de
-                nuestro formulario de contacto o al correo <strong>hola@torinocaffeacademy.com</strong> y nuestro equipo docente te responderá a la mayor brevedad posible.
+                nuestro formulario de contacto o al correo <strong>info@torinocaffe.info</strong> y nuestro equipo docente te responderá a la mayor brevedad posible.
               </p>
             </div>
           </div>

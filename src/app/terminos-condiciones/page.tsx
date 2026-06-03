@@ -61,7 +61,7 @@ export default function TermsAndConditionsPage() {
 
               <h2>6. Preguntas e Información de Contacto</h2>
               <p>
-                Cualquier duda o comentario referente a los presentes términos de uso puede dirigirse a: <strong>hola@torinocaffeacademy.com</strong>.
+                Cualquier duda o comentario referente a los presentes términos de uso puede dirigirse a: <strong>info@torinocaffe.info</strong>.
               </p>
             </div>
           </div>
