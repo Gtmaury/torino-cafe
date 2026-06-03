@@ -6,6 +6,7 @@ export const NAV_LINKS: NavLink[] = [
   { label: 'Academia',    href: '/#academia' },
   { label: 'Cursos',      href: '/#cursos' },
   { label: 'Máquinas',    href: '/#machines' },
+  { label: 'Experiencia', href: '/experiencia' },
   { label: 'Blog',        href: '/#blog' },
   { label: 'Contacto',    href: '/#contacto' },
 ];
@@ -27,6 +28,15 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
       { label: 'Calendarios',           href: '/cursos#calendarios' },
       { label: 'Métodos de pago',       href: '/metodos-pago' },
       { label: 'Preguntas frecuentes',  href: '/preguntas-frecuentes' },
+    ],
+  },
+  {
+    title: 'Experiencia',
+    links: [
+      { label: 'Máquinas',  href: '/maquinas' },
+      { label: 'Espacio',   href: '/academia#espacio' },
+      { label: 'Galería',   href: '/academia#galeria' },
+      { label: 'Blog',      href: '/blog' },
     ],
   },
 ];
