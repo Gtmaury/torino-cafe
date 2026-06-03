@@ -31,8 +31,8 @@
 
   /* Spacing — base for 1920px wide screens */
   --section-py:       75px;
-  --container-max:    1720px;
-  --container-px:     24px;
+  --container-max:    1580px;
+  --container-px:     38px;
 
   /* Motion */
   --ease-out:      cubic-bezier(0.4, 0, 0.2, 1);
@@ -109,9 +109,9 @@ button { cursor: pointer; font-family: inherit; }
 */
 @media (max-width: 1500px) {
   :root {
-    --container-max: 1420px;   /* proportionally narrower, like 1280/1920 ratio */
+    --container-max: 1320px;   /* proportionally narrower, like 1280/1920 ratio */
     --section-py:    60px;
-    --container-px:  24px;
+    --container-px:  38px;
   }
 }
 
@@ -139,7 +139,7 @@ button { cursor: pointer; font-family: inherit; }
 @media (max-width: 900px) {
   :root {
     --section-py:    70px;
-    --container-px:  20px;
+    --container-px:  28px;
     --container-max: 100%;
   }
 }
@@ -148,7 +148,7 @@ button { cursor: pointer; font-family: inherit; }
 @media (max-width: 600px) {
   :root {
     --section-py:    52px;
-    --container-px:  12px;
+    --container-px:  20px;
   }
 }
 
