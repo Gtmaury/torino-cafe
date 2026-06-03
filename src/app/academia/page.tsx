@@ -6,7 +6,7 @@ import styles from './AcademiaPage.module.css';
 
 export const metadata = {
   title: 'Nuestra Academia de Baristas',
-  description: 'Conoce la historia, el método práctico "by Nisi" y la filosofía detrás de Torino Caffè Academy, escuela líder de baristas.',
+  description: 'Conoce la historia, el método práctico y la filosofía detrás de Torino Caffè Academy, escuela líder de baristas.',
 };
 
 export default function AcademiaPage() {

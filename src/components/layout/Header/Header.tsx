@@ -25,7 +25,6 @@ export function Header() {
           <Link href="/#inicio" className={styles.logo} id="logo" aria-label="Torino Caffè Academy — inicio">
             <span className={styles.logoMain}>TORINO <em>CAFFÈ</em></span>
             <span className={styles.logoSub}>ACADEMY</span>
-            <span className={styles.logoBy}>by Nisi</span>
           </Link>
 
           {/* Desktop nav */}

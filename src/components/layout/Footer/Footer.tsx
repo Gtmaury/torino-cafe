@@ -14,7 +14,7 @@ export function Footer() {
           <div className={styles.brand}>
             <div>
               <p className={styles.brandName}>TORINO <em>CAFFÈ</em></p>
-              <p className={styles.brandSub}>ACADEMY · by Nisi</p>
+              <p className={styles.brandSub}>ACADEMY</p>
             </div>
             <p className={styles.brandDesc}>
               Academia especializada en formación barista y cultura del espresso italiano.
@@ -77,7 +77,7 @@ export function Footer() {
         {/* Bottom bar */}
         <div className={styles.bottom}>
           <p className={styles.copy}>
-            &copy; {new Date().getFullYear()} Torino Caffè Academy by Nisi. Todos los derechos reservados.
+            &copy; {new Date().getFullYear()} Torino Caffè Academy. Todos los derechos reservados.
           </p>
           <nav className={styles.legal} aria-label="Legal">
             <Link href="/politicas-privacidad">Políticas de privacidad</Link>
