@@ -32,7 +32,7 @@
   --font-body:    'Inter', system-ui, sans-serif;
 
   /* Spacing — base for 1920px wide screens */
-  --section-py:       100px;
+  --section-py:       75px;
   --container-max:    1280px;
   --container-px:     40px;
 
@@ -112,7 +112,7 @@ button { cursor: pointer; font-family: inherit; }
 @media (max-width: 1500px) {
   :root {
     --container-max: 1160px;   /* proportionally narrower, like 1280/1920 ratio */
-    --section-py:    88px;
+    --section-py:    60px;
     --container-px:  40px;
   }
 }
