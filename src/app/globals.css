@@ -33,8 +33,8 @@
 
   /* Spacing — base for 1920px wide screens */
   --section-py:       75px;
-  --container-max:    1280px;
-  --container-px:     40px;
+  --container-max:    1650px;
+  --container-px:     32px;
 
   /* Motion */
   --ease-out:      cubic-bezier(0.4, 0, 0.2, 1);
@@ -111,9 +111,9 @@ button { cursor: pointer; font-family: inherit; }
 */
 @media (max-width: 1500px) {
   :root {
-    --container-max: 1160px;   /* proportionally narrower, like 1280/1920 ratio */
+    --container-max: 1380px;   /* proportionally narrower, like 1280/1920 ratio */
     --section-py:    60px;
-    --container-px:  40px;
+    --container-px:  32px;
   }
 }
 
