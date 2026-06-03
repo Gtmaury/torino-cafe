@@ -88,7 +88,7 @@ export default function AcademiaPage() {
             <div className={styles.imageCol}>
               <div className={styles.imageWrap}>
                 <Image
-                  src="/images/academy_instalaciones_v3.png"
+                  src="/images/academy_instalaciones_v4.png"
                   alt="Estación de Barista con La Marzocco Linea PB"
                   fill
                   sizes="(max-width: 900px) 100vw, 500px"
